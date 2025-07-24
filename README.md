@@ -49,20 +49,19 @@ Use `{{variable}}` syntax only inside the instruction to represent values the us
 
 ```md
 You are an intelligent educational coach that designs interactive, age-appropriate learning sessions.  
-Using the user-provided variables—Name, Age, Subject, Topic, Preferred Style, Goal, and Time Available—generate a customized micro-lesson plan.
+Ask for variables **Name**, **Age**, **Subject**, **Topic**, **Preferred Style**, **Goal**, and **Time Available** then generate a customized micro-lesson plan. 
 
 Structure the response as follows:
 1. **Greeting** using the name: "Hello {{name}}"
 2. **Brief Overview** of the topic: "{{topic}}" within the subject "{{subject}}"
 3. **Session Outline** with 3 to 4 activities, adapted to the style "{{preferred_style}}" and within the time "{{time_available}}"
 4. **Expected Outcome**: By the end, the user will achieve "{{goal}}"
-5. **Optional Follow-Up**: Ask if the user wants extra help or practice on "{{topic}}"
 
-Adjust the content complexity to fit an age of {{age}}.
-Always return a structured, easy-to-read output based on this format.
+> **Note:** Adjust the content complexity to fit an age of {{age}}.
+  Always return a structured, easy-to-read output based on this format.
 
-After the session plan, ask the user:  
-"Would you like a summary note or additional practice for this topic?"
+> **Note:** After the session plan, ask the user:   
+  "Would you like a summary note or additional practice for this topic?"
 ```
 
 This instruction will work consistently in any AI environment and produce reliable, customized output.
@@ -101,24 +100,60 @@ Time Available: 25 minutes
 
 ### Step 4: Generate Tailored Output
 
+```md
+### Hello Priya
+
+### Brief Overview
+
+Today, we’re diving into the topic of **Quadratic Equations** within the subject **Mathematics**.
+A quadratic equation is an equation of the form **ax² + bx + c = 0**, where **a, b,** and **c** are constants and **x** is the variable. These equations are essential for understanding curves (called parabolas) and solving many algebraic problems.
+
+---
+
+### Session Outline (25 Minutes — Concept Explanation + Practice)
+
+1. **Introduction to Quadratic Equations (5 mins)**
+
+   * Define what a quadratic equation is
+   * Explain the difference between quadratic and linear equations
+   * Identify parts of the equation: coefficient, variable, and constant
+   * Show the standard form: **ax² + bx + c = 0**
+
+2. **Methods to Solve (8 mins)**
+
+   * Overview of three main methods:
+
+     * Factorization (used today)
+     * Completing the square (just a brief mention)
+     * Quadratic formula (also introduced for awareness)
+   * Focus this session on solving by **factorization**
+
+3. **Guided Practice (7 mins)**
+
+   * Solve together:
+
+     * Example 1: **x² - 5x + 6 = 0**
+     * Example 2: **x² + 3x - 10 = 0**
+   * I’ll explain the steps and support you as needed
+
+4. **Independent Practice (5 mins)**
+
+   * Your turn to try:
+
+     * **x² - 7x + 10 = 0**
+     * **x² + 2x - 15 = 0**
+   * I’ll review your answers and help with corrections if needed
+
+---
+
+### Expected Outcome
+
+By the end of this session, you’ll be able to **identify quadratic equations** and **solve them using factorization** effectively.
+
+---
+
+Would you like a **summary note** or **additional practice** for this topic?
 ```
-Hello Priya! Let's dive into quadratic equations in a focused 25-minute learning session.
-
-Overview:  
-Quadratic equations are second-degree algebraic expressions in the form ax² + bx + c = 0. Solving them helps you understand the shape and roots of parabolas.
-
-Session Outline:
-1. Introduction (5 mins): Understand standard form, roots, and what makes it a quadratic equation.
-2. Explanation (10 mins): Explore methods—factoring, completing the square, and the quadratic formula.
-3. Practice (7 mins): Solve 3 problems using different techniques.
-4. Challenge (3 mins): Word problem where you apply quadratic equations in a real-world situation.
-
-Expected Outcome:  
-By the end of this session, you will be able to identify, simplify, and solve basic to intermediate quadratic equations using multiple strategies.
-
-Would you like a summary note or additional practice for this topic?
-```
-
 ---
 
 ## Why Instructive Prompting Stands Out
